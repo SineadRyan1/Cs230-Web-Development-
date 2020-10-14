@@ -1,0 +1,75 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 25, 2019 at 05:22 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `sineaddb`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ebook_metadata`
+--
+
+CREATE TABLE `ebook_metadata` (
+  `id` int(11) NOT NULL,
+  `creator` varchar(50) CHARACTER SET hp8 NOT NULL,
+  `title` varchar(50) CHARACTER SET hp8 NOT NULL,
+  `type` varchar(30) CHARACTER SET armscii8 COLLATE armscii8_bin NOT NULL,
+  `identifier` varchar(13) CHARACTER SET hp8 NOT NULL,
+  `date` date NOT NULL,
+  `language` varchar(50) CHARACTER SET hp8 NOT NULL,
+  `description` varchar(250) CHARACTER SET hp8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ebook_metadata`
+--
+
+INSERT INTO `ebook_metadata` (`id`, `creator`, `title`, `type`, `identifier`, `date`, `language`, `description`) VALUES
+(1, 'Patrick Modiano', 'Chien de Printemps', 'French Fiction', '2020252600', '2007-05-10', 'French', ' Afterimage is a short novella -- originally published as a stand-alone in French (and German translation), but collected with two earlier novellas in Suspended Sentences in English translation. The first-person narrator -- the same age as Modiano, a'),
+(2, 'Ayn Rand', 'Atlas Shrugged', 'Classic Fiction', 'B003V8B5XO', '2005-04-21', 'English', 'Set in a near-future U.S.A. whose economy is collapsing as a result of the mysterious disappearance of leading innovators and industrialists, this novel presents an astounding panorama of human life-from the productive genius who becomes a worthless '),
+(3, 'Leonard Cohen', 'The Flame', 'Poetry', ' 978178689313', '2018-10-02', 'English', 'The Flame is a stunning collection of Leonard Cohens last poems and writings selected and ordered by Cohen in the final months of his life.'),
+(4, 'Lewis Carroll', 'Alice in Wonderland', 'Childrens Literature', '9780141439761', '2003-03-27', 'English', 'Bored on a hot afternoon, Alice follows a White Rabbit down a rabbit-hole without giving a thought about how she might get out. And so she tumbles into Wonderland: where animals answer backa baby turns into a pig time stands still at a disorderly tea');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `ebook_metadata`
+--
+ALTER TABLE `ebook_metadata`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `ebook_metadata`
+--
+ALTER TABLE `ebook_metadata`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
